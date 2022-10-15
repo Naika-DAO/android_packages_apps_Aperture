@@ -1307,10 +1307,10 @@ open class CameraActivity : AppCompatActivity() {
     private fun hideStatusBars() {
         val windowInsetsController = getInsetsController(window, window.decorView)
         // Configure the behavior of the hidden system bars
-        windowInsetsController.systemBarsBehavior =
+        windowInsetsController?.systemBarsBehavior =
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         // Hide the status bar
-        windowInsetsController.hide(WindowInsetsCompat.Type.statusBars())
+        windowInsetsController?.hide(WindowInsetsCompat.Type.statusBars())
     }
 
     private fun startTimerAndRun(runnable: () -> Unit) {
